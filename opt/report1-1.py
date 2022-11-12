@@ -1,14 +1,14 @@
 #問1
-
-n = int(input("自然数を入力してください = "))
-
-while True:
-  print(n)
-  if n == 1:
-    break
-  elif n % 2 == 0:
-    n = n / 2
-  else:
-    n = 3 * n + 1
-
-print(n)
+n = float(input("ここに正の整数nを入力してください n = "))
+if (n <= 0) or (n % 1 != 0): # 入力されたnが0以下であったり、正であるが整数ではない数だったりした場合に処理を進ませない
+  print("正の整数を入力してください")
+else:
+  n = int(n)
+  while True:
+    print(n) # 最初のnからnが1になるまでの間、nを出力する
+    if n == 1: # nが１になった時、ループ処理から抜ける
+      break
+    elif n % 2 == 0: # nが偶数の時
+      n = n / 2
+    else: # nが奇数の時
+      n = 3 * n + 1
